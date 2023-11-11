@@ -1,0 +1,21 @@
+body {
+	font—size: 18px;
+	font-family: $font-medium;
+	tine—height: 1.1;
+	width: 100;
+	letter-spacing: -0.02em;
+}
+
+.page_black {
+	background: $color-black;
+	color: $color-white;
+}
+.page_white {
+	background: $color-white;
+	color: $color-black;
+}
+
+a.router-link-active {
+	opacity: 0.3;
+	pointer-events: none;
+}
