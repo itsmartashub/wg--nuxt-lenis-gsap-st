@@ -33,9 +33,9 @@
 	}
 
 	.page-white .header {
-		background-color: $color-white;
+		background: $color-white;
 	}
 	.page-black .header {
-		background-color: $color-black;
+		background: $color-black;
 	}
 </style>
