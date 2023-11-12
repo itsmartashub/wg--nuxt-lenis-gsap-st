@@ -1,12 +1,13 @@
 * {
 	margin: 0;
 	padding: 0;
+	outline: none;
 	box-sizing: border-box;
 }
 body {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
-	-webkit-font-smoothing: greyscaled;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 a {

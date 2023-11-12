@@ -6,6 +6,16 @@ body {
 	letter-spacing: -0.02em;
 }
 
+a.router-link-active {
+	opacity: 0.3;
+	pointer-events: none;
+}
+
+.page-content {
+	width: 600px;
+	margin: 0 auto;
+}
+
 .page_black {
 	background: $color-black;
 	color: $color-white;
@@ -13,9 +23,4 @@ body {
 .page_white {
 	background: $color-white;
 	color: $color-black;
-}
-
-a.router-link-active {
-	opacity: 0.3;
-	pointer-events: none;
 }
