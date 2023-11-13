@@ -3,14 +3,25 @@
 		title: String,
 		pageName: String,
 	})
+
+	// moramo dodati u imports 'animations' da bismo mogli ovde koristiti firstScreenAnimation.js iz animations foldera
+	watch(
+		() => [general.isTransitionStart, general.isPreloaderVisible],
+		([transitionStart, preloaderVisibility]) => {
+			if (transitionStart && !preloaderVisibility) {
+				firstScreenAnimation({ parent: `.${props.pageName}` })
+			}
+		}
+	)
 </script>
 
 <template>
 	<div :class="`page ${props.pageName}`">
-		<div class="page-wrap _container">
-			<TheHeader />
-			<TheTitle :text="props.title" />
+		<TheHeader />
 
+		<div class="page-wrap _container">
+			<PageMask />
+			<TheTitle :text="props.title" />
 			<slot />
 		</div>
 	</div>

@@ -1,17 +1,25 @@
-<script lang="ts" setup></script>
+<script setup>
+	definePageMeta(transition)
+
+	watch(
+		() => [general.isTransitionFinish, general.isPreloaderVisible],
+		([transitionFinish, preloaderVisibility]) => {
+			if (transitionFinish && !preloaderVisibility) {
+				contentAnimation({
+					type: 'text',
+					element: '.page-content__block',
+				})
+			}
+		}
+	)
+</script>
 
 <template>
 	<div :class="general.pageBg">
-		<NuxtLayout
-			name="custom"
-			title="about"
-			:page-name="$route.name"
-		>
+		<NuxtLayout name="custom" title="about" :page-name="$route.name">
 			<div class="page-content">
-				<div
-					v-for="_ in 10"
-					class="page-content__block p1"
-				>
+				<div v-for="_ in 10" class="page-content__block p1">
+					<pre>{{ $route.name }}</pre>
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus laboriosam alias accusantium libero.
 					Unde saepe amet temporibus magni commodi placeat, aliquid fugit, nihil quaerat iusto eius odio illum
 					mollitia blanditiis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate dignissimos

@@ -18,6 +18,6 @@ export default defineNuxtConfig({
 
 	// valjda s ovim mozemo da koristimo store propertoje svugde u projectu preko general propertija (PROVERITI OVO!!)
 	imports: {
-		dirs: ['store', 'utils'],
+		dirs: ['store', 'utils', 'animations'],
 	},
 })

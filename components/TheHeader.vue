@@ -8,9 +8,7 @@
 
 <template>
 	<header class="header">
-		<NuxtLink v-for="link in links" :key="link" :to="link.href" class="header-link hover-fadein">{{
-			link.text
-		}}</NuxtLink>
+		<NuxtLink v-for="link in links" :to="link.href" class="header-link hover-fadein">{{ link.text }}</NuxtLink>
 	</header>
 </template>
 

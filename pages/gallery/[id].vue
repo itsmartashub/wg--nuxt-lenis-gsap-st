@@ -1,4 +1,26 @@
-<script lang="ts" setup></script>
+<script setup>
+	definePageMeta(transition)
+
+	watch(
+		() => [general.isTransitionFinish, general.isPreloaderVisible],
+		([transitionFinish, preloaderVisibility]) => {
+			if (transitionFinish && !preloaderVisibility) {
+				contentAnimation({
+					type: 'text',
+					element: '.page-content__block-text',
+				})
+				contentAnimation({
+					type: 'image',
+					element: '.page-content__block-photo',
+				})
+				contentAnimation({
+					type: 'text',
+					element: '.page-next__project',
+				})
+			}
+		}
+	)
+</script>
 
 <template>
 	<div :class="general.pageBg">
@@ -26,7 +48,8 @@
 						class="page-next__project-link hover-fadein h2"
 						:to="`/gallery/${+$route.params.id + 1}`"
 					>
-						next project - {{ +$route.params.id + 1 }}
+						next project
+						<!-- next project - {{ +$route.params.id + 1 }} -->
 					</NuxtLink>
 				</div>
 			</div>

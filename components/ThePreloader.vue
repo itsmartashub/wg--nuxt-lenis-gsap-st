@@ -2,7 +2,8 @@
 	const percentage = ref(0)
 
 	onMounted(() => {
-		console.log(gsap)
+		// console.log(gsap)
+
 		const tl = gsap.timeline()
 
 		tl.to(percentage, {
@@ -31,7 +32,7 @@
 
 <template>
 	<div class="preloader">
-		<div class="preloader-percent h2">{{ percentage }}%</div>
+		<div class="preloader-percent h1">{{ percentage }}%</div>
 	</div>
 </template>
 
@@ -40,10 +41,10 @@
 		position: fixed;
 		inset: 0;
 		background: $color-white;
+		color: $color-black;
 		z-index: $z-preloader;
 		display: flex;
 		align-items: center;
-
-		color: #000;
+		justify-content: center;
 	}
 </style>

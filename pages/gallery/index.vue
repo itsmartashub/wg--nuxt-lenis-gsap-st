@@ -1,4 +1,18 @@
-<script lang="ts" setup></script>
+<script setup>
+	definePageMeta(transition)
+
+	watch(
+		() => [general.isTransitionFinish, general.isPreloaderVisible],
+		([transitionFinish, preloaderVisibility]) => {
+			if (transitionFinish && !preloaderVisibility) {
+				contentAnimation({
+					type: 'image',
+					element: '.page-content__photo',
+				})
+			}
+		}
+	)
+</script>
 
 <template>
 	<div :class="general.pageBg">
