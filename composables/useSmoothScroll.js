@@ -9,14 +9,10 @@ export const useSmoothScroll = () => {
 		smoothWheel: true,
 	})
 
-	// TODO videti sta ovo znaci
 	general.scrollLenis.on('scroll', ScrollTrigger.update)
 
-	gsap.ticker.add((time) => {
-		general.scrollLenis.raf(time * 1000)
-	})
+	gsap.ticker.add((time) => general.scrollLenis.raf(time * 1000))
 
-	// TODO videti sta ovo znaci jeez
 	gsap.ticker.lagSmoothing(0)
 	general.scrollLenis.scrollTo(0)
 	// general.scrollLenis.stop()

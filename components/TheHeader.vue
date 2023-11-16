@@ -7,8 +7,14 @@
 </script>
 
 <template>
-	<header class="header">
-		<NuxtLink v-for="link in links" :to="link.href" class="header-link hover-fadein">{{ link.text }}</NuxtLink>
+	<header class="header" data-lenis-prevent>
+		<NuxtLink
+			v-for="link in links"
+			:to="link.href"
+			class="header-link hover-fadein"
+		>
+			{{ link.text }}
+		</NuxtLink>
 	</header>
 </template>
 

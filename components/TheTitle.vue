@@ -20,5 +20,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+
+		&__wrap {
+			will-change: transform;
+		}
 	}
 </style>

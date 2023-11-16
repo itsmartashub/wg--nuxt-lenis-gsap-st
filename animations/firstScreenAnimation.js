@@ -15,7 +15,7 @@ export function firstScreenAnimation({ parent }) {
 		opacity: 0,
 		clearProps: 'all',
 	})
-	// i sada idemo prvo u nuxt.config.js i u imports dodajemo 'animations', a onda u layouts/custom.vue da dodamo wather koji ce
+
 	tl.from(
 		header,
 		{
@@ -24,4 +24,6 @@ export function firstScreenAnimation({ parent }) {
 		},
 		'<'
 	)
+
+	// i sada idemo prvo u nuxt.config.js i u imports dodajemo 'animations', a onda u layouts/custom.vue da dodamoe watcher
 }

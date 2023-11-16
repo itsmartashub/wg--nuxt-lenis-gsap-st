@@ -16,7 +16,8 @@
 
 <template>
 	<div :class="general.pageBg">
-		<NuxtLayout name="custom" title="gallery" :page-name="$route.name">
+		<!-- <NuxtLayout name="custom" title="gallery" :page-name="$route.name"> -->
+		<NuxtLayout name="custom" title="gallery" page-name="gallery">
 			<div class="page-content">
 				<NuxtLink
 					v-for="(_, i) in 10"
